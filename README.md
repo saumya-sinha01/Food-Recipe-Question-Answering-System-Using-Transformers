@@ -8,9 +8,9 @@ Fine tuning Generative Question Answering task learnt from Hugging Face course: 
 * preprocessing.ipynb: Contains the Preprocessing class responsible for preprocessing and combining the body and delete unnecessary attributes: videos, images, id.
 * QA_Saumya_DeBERTa_Base|Albert|DistilBert.ipynb: Contains the QADataset class for downloading and converting the question answering dataset from original dataset,                                                     Model class to perform fine-tuning on different pre-trained model and HyperParameter optimization class to perform                                                    hyper-parameter optimization.
 # Classes
-Datasets
+**Datasets**
 * Download data from Google Drive and convert data to desired format for Extractive Question Answering
-Methods:
+**Methods**
 * filter_data_from_original(): create two dataframes, textual and visual from textual_cloze and visual_coherence
 * combine_steps(): combine all step titles in the recipe set
 * combine_textual_visual_df(): merge and clean textual and visual dataframe created
@@ -18,7 +18,7 @@ Methods:
 * generate_full_instruction(): create full context/instruction for each recipe
 * generate_answer_and_index(): create spanned answer and answer start index
  *make_final_data(): make the final data (apply for train, test, and validation set)
-Processing
+**Processing**
 Methods:
 * make_dataset(): convert dataframes into DatasetDict structure to easier access train and val set
 * tokenizer(): call instance of tokenizer by given pretrained model checkpoint
@@ -28,14 +28,14 @@ Methods:
 * preprocessed_val(): Apply preprocess_validation() function to the whole validation set and return results
 * train_dataloader(): Creates a PyTorch DataLoader for the preprocessed training dataset. Returns the training DataLoader.
 * eval_dataloader(): Creates a PyTorch DataLoader for the preprocessed validation dataset. Returns the validation DataLoader.
-Model
+**Model**
 Methods:
 * call_model(): Loads the pre-trained question answering model.
 * prepare_fine_tuning(): Prepares the model, optimizer, and data loaders for fine-tuning.
 * train(): Performs the training loop.
 * evaluate(): Performs the evaluation on the validation set.
 * fine_tune(): Executes the fine-tuning process.
-HPO
+**HPO**
 Methods:
 * hyperparameter_opimization(): Optimizes the hyper-parameters.
 
