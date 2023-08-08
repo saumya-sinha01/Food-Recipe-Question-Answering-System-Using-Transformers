@@ -10,6 +10,7 @@ Fine tuning Generative Question Answering task learnt from Hugging Face course: 
 # Classes
 **Datasets**
 * Download data from Google Drive and convert data to desired format for Extractive Question Answering
+  
 **Methods**
 * filter_data_from_original(): create two dataframes, textual and visual from textual_cloze and visual_coherence
 * combine_steps(): combine all step titles in the recipe set
@@ -18,6 +19,7 @@ Fine tuning Generative Question Answering task learnt from Hugging Face course: 
 * generate_full_instruction(): create full context/instruction for each recipe
 * generate_answer_and_index(): create spanned answer and answer start index
  *make_final_data(): make the final data (apply for train, test, and validation set)
+  
 **Processing**
 Methods:
 * make_dataset(): convert dataframes into DatasetDict structure to easier access train and val set
@@ -28,6 +30,7 @@ Methods:
 * preprocessed_val(): Apply preprocess_validation() function to the whole validation set and return results
 * train_dataloader(): Creates a PyTorch DataLoader for the preprocessed training dataset. Returns the training DataLoader.
 * eval_dataloader(): Creates a PyTorch DataLoader for the preprocessed validation dataset. Returns the validation DataLoader.
+  
 **Model**
 Methods:
 * call_model(): Loads the pre-trained question answering model.
@@ -35,6 +38,7 @@ Methods:
 * train(): Performs the training loop.
 * evaluate(): Performs the evaluation on the validation set.
 * fine_tune(): Executes the fine-tuning process.
+  
 **HPO**
 Methods:
 * hyperparameter_opimization(): Optimizes the hyper-parameters.
