@@ -44,3 +44,22 @@ Methods:
 * hyperparameter_opimization(): Optimizes the hyper-parameters.
 
 
+# Usage
+* Each of the files has comeplete pipeline of making the dataset, processing, modelling and HPO. 
+* checkpoint_list include all the pre-trained models that we have applied fine-tuning on
+    can modify to reduce the number of models for faster computational time for testing the codes
+    best performing model is 'microsoft/deberta-base'
+* checkpoint_list = ["microsoft/deberta-base", "google/electra-small-generator", "google/electra-large-generator",
+                       "albert-base-v2", "distilbert-base-uncased", "nghuyong/ernie-2.0-base-en", "xlm-roberta-base",
+                      "facebook/bart-base", "Google/bigbird-roberta-base", "roberta-base",
+                      "squeezebert/squeezebert-uncased", "bert-base"]
+All fine-tuned models can be reached here at our HF hubs:
+* Dhruv's: https://huggingface.co/slushi7
+* Gianni's: https://huggingface.co/Data255FinalProj
+* Saumya's: https://huggingface.co/saumyasinha0510
+* Tam's: https://huggingface.co/tamhuynh27
+
+* All the models were initially trained and ran on Google Colab.
+* Suggest to start with a small model to test the code as left default checkpoint_list = ['distilbert-base-uncased']
+* performed hyperparameter optimization on the best fine-tuned model slushi7/deberta-base-recipeQA. And calculate performance of the test set on the optimized        model from checkpoint Data255FinalProj/deberta-saumya-tune
+
